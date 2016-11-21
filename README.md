@@ -1,11 +1,11 @@
-# Planning **portfolio_website** Application
+# Planning personal_portfolio Application
 
   1. Answer Questions
     - What am I building?
     - Who am I building it for?
     - What features do I need to have?
   2. User Stories.
-  3. Model our Data.
+  3. Model my Data.
   4. Think through the pages I need in my application.
 
 ## Questions
