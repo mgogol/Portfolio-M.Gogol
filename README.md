@@ -1,28 +1,43 @@
-== README
+# Planning **portfolio_website** Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  1. Answer Questions
+    - What am I building?
+    - Who am I building it for?
+    - What features do I need to have?
+  2. User Stories.
+  3. Model our Data.
+  4. Think through the pages I need in my application.
 
-Things you may want to cover:
+## Questions
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  1. What am I building? I'm building a personal portfolio website. A place where a can show my completed projects and have people contact with me.
+  2. Who am I building it for? I'm building it for myself. Show potential employers that I know what I'm doing.
+  3. What features do I need to have?
+    - Projects
+      - Create / Edit / Destroy
+    - Contact
+      - Contact Form
+      - Send grid
+    - User (Devise)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## User Stories
+  - As a user, I want be able to create a portfolio element to share it.
+  - As a user, I want be able to edit & destroy posts, so that I can manage my portfolio.
+  - As a user, I want to show the visitors and potential employers examples of my work.
+  - As a user, I want be able to have visitors contact me through form on my site.
+
+## Modeling our Data
+  **Project**
+    title:string
+    description:text
+    link:string
+    image:picture
+  **User**
+
+## Think through the pages we need in our application
+
+  - Home
+  - Projects
+  - Projects#index
+  - Projects#show
