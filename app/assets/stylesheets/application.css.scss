@@ -1,0 +1,299 @@
+// -- VARIABLES BEGIN
+$grey: #d0d0d0;
+$blue: #575c6f;
+$orange: #eaac97;
+$input_color: #c6cad6;
+// -- VARIABLES END
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: color 0.1s, background 0.4s;
+  // font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+hr {
+  margin: 0;
+  border-color: #f0f0f0;
+}
+
+.float_right {
+  float: right;
+}
+
+.center_block {
+  margin: 0 auto;
+  display: block;
+}
+
+.main_title {
+  font-size: 3em;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: $blue;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+// --- HEADER BEGIN ===========
+.wrapper {
+  background-color: #fff;
+}
+
+.header__navigation {
+  text-align: center;
+  padding: 55px 0;
+
+  nav {
+    cursor: pointer;
+  }
+
+  a {
+    color: $grey;
+    padding: 0 40px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+  // --- Logo
+  .logo__link {
+    border: 1px solid $blue;
+    color: $blue;
+    padding: 10px 15px;
+    margin-right: 15px;
+    margin-left: 30px;
+
+    &:hover {
+      color: #fff;
+      background-color: $blue;
+    }
+  }
+}
+// --- HEADER END  ===========
+// -- SECOND BLOCK BEGIN ===========
+.title__column {
+  text-align: center;
+  padding-top: 55px;
+
+  h3 {
+    color: $grey;
+    margin-bottom: 0.2em;
+  }
+
+  h1 {
+    font-weight: 700;
+    color: $blue;
+    letter-spacing: 0.5px;
+
+    #span__website {
+      color: $orange;
+    }
+
+    #span__ampersant {
+      font-weight: 400;
+    }
+  }
+
+  p {
+    color: $orange;
+    font-size: 1.1em;
+  }
+
+  hr {
+    width: 80%;
+    margin: 55px auto 0;
+  }
+}
+
+.image__column {
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  img {
+    display: block;
+    margin: 30px auto 0;
+  }
+}
+// -- SECOND BLOCK END ===========
+// -- THIRD BLOCK BEGIN ===========
+.quote__column {
+  text-align: center;
+  padding: 55px 0;
+
+  blockquote {
+    color: $blue;
+    // font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 20px 0;
+    line-height: 0;
+
+    &:before {
+      content: open-quote;
+      font-family: Georgia, serif;
+      vertical-align: -0.4em;
+      font-size: 90px;
+      padding-right: 20px;
+    }
+
+    &:after {
+      content: close-quote;
+      font-family: Georgia, serif;
+      vertical-align: -0.7em;
+      font-size: 90px;
+      padding-left: 15px;
+    }
+  }
+
+  hr {
+    width: 30%;
+    margin: 0 auto;
+    border: 2px solid #fdf0d3;
+  }
+}
+// -- THIRD BLOCK END ===========
+// -- FOUR BLOCK BEGIN
+.portfolio__column {
+  p {
+    text-align: right;
+  }
+
+  hr {
+    border: 2px solid $orange;
+    text-align: right;
+    width: 20%;
+    margin: 15px 0 25px auto;
+  }
+}
+
+.about-me__column {
+  padding-bottom: 70px;
+
+  p {
+    color: $blue;
+  }
+
+  hr {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    width: 20%;
+    border: 2px solid $orange;
+  }
+}
+// -- FOUR BLOCK END
+// -- CONTACT ME BEGIN
+.contact_me {
+  .main_title {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .contact_me__description {
+    text-align: center;
+    color: $orange;
+  }
+}
+
+.contact_input {
+  width: 55%;
+  margin: 15px auto;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.1em;
+  border-radius: 0;
+  border-color: #f0f0f0;
+}
+
+#name__Input {
+  margin-top: 30px;
+  padding: 25px 0 25px 25px;
+  border-radius: 0;
+  border-color: #f0f0f0;
+
+  &:focus {
+    border: 1px solid $input_color;
+  }
+}
+
+#email__Input {
+  padding: 25px 0 25px 25px;
+  border-radius: 0;
+  border-color: #f0f0f0;
+
+  &:focus {
+    border: 1px solid $input_color;
+  }
+}
+
+#message__Input {
+  padding: 25px 0 25px 25px;
+  height: 170px;
+
+  &:focus {
+    border: 1px solid $input_color;
+  }
+}
+
+.row__buttons {
+  margin-top: 20px;
+}
+
+.success_column {
+  margin-left: 2.3%;
+}
+
+#btn__sumbit {
+  font-size: 1em;
+  margin-left: 0.2%;
+  line-height: 1em;
+  font-weight: 600;
+  color: $blue;
+  border: none;
+  background-color: $input_color;
+
+  &:hover {
+    background-color: #dde2f1;
+  }
+}
+
+.social_column {
+  margin-left: 0.5%;
+}
+
+.social_link_envelope {
+  color: $blue;
+
+  &:hover {
+    color: #F44336;
+  }
+}
+
+.social_link_facebook {
+  color: $blue;
+  margin-left: 20px;
+
+  &:hover {
+    color: #3b5998;
+  }
+}
+// -- CONTACT ME END
+
+.copyright_text {
+  text-align: center;
+  font-size: 13px;
+  color: #c1bebe;
+  font-weight: 300;
+}
