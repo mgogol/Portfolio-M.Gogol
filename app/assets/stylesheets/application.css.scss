@@ -31,10 +31,14 @@ hr {
 }
 
 .center_block {
-  margin: 0 auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
   display: block;
+  float: none;
 }
-
+.text_center {
+  text-align: center;
+}
 .main_title {
   font-size: 3em;
   text-transform: capitalize;
@@ -167,6 +171,7 @@ hr {
 // -- THIRD BLOCK END ===========
 // -- FOUR BLOCK BEGIN
 .portfolio__column {
+  display: inline-block;
   p {
     text-align: right;
   }
@@ -176,6 +181,24 @@ hr {
     text-align: right;
     width: 20%;
     margin: 15px 0 25px auto;
+  }
+
+  .portfolio__item {
+    width: 49%;
+    display: inline-block;
+    transition: 0.4s;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:nth-child(3) {
+      margin-top: 20px;
+    }
+    &:hover {
+      opacity: 0.5;
+      transition: 0.4s;
+    }
   }
 }
 
@@ -241,9 +264,13 @@ hr {
 #message__Input {
   padding: 25px 0 25px 25px;
   height: 170px;
+  width: 55%;
+  overflow: visible !important;
 
   &:focus {
     border: 1px solid $input_color;
+    //width: 100%;
+    overflow: visible !important;
   }
 }
 
@@ -254,7 +281,9 @@ hr {
 .success_column {
   margin-left: 2.3%;
 }
-
+.contact_input_column {
+  width: 100% !important;
+}
 #btn__sumbit {
   font-size: 1em;
   margin-left: 0.2%;
@@ -297,3 +326,5 @@ hr {
   color: #c1bebe;
   font-weight: 300;
 }
+
+@import url('projects.scss');

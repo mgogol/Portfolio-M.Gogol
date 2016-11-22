@@ -1,3 +1,15 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.scss.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.project__description {
+  padding-top: 25px;
+  color: #333;
+  line-height: 27px;
+}
+.project__title {
+  margin: 25px 0;
+  font-weight: 700;
+  color: #575c6f;
+}
+.edit__buttons_column {
+  a {
+    text-align: right;
+  }
+}
