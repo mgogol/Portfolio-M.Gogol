@@ -1,21 +1,16 @@
-<%= form_for @project do |f| %>
-  <% if @project.errors.any? %>
-    <!-- true -->
-    <h2><%= pluralize(@project.errors.count, "error") %> prevented this post from saving!</h2>
-    <ul>
-      <% @project.errors.full_messages.each do |msg| %>
-        <li><% msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
+<%= simple_form_for @project do |f| %>
+    <% if @project.errors.any? %>
+        <!-- true -->
+        <h2><%= pluralize(@project.errors.count, "error") %> prevented this post from saving!</h2>
+        <ul>
+          <% @project.errors.full_messages.each do |msg| %>
+              <li><% msg %></li>
+          <% end %>
+        </ul>
+    <% end %>
 
-  <%= f.label :title %><br>
-  <%= f.text_field :title %>
-
-  <br>
-  <br>
-
-  <%= f.label :description, "Write your description here..."%><br>
-  <%= f.text_area :description %> <br>
-  <%= f.submit %>
+    <%= f.input :title, label: 'Title'%>
+    <%= f.input :image %>
+    <%= f.input :description, label: 'Your description here...' %> <br>
+    <%= f.submit %>
 <% end %>
