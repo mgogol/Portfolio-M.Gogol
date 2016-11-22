@@ -1,7 +1,13 @@
+// Page portfolio element styling BEGIN ====
 .project__description {
   padding-top: 25px;
-  color: #333;
+  color: #999999;
   line-height: 27px;
+}
+.description__block {
+  p {
+    color: #575c6f;
+  }
 }
 .project__title {
   margin: 25px 0;
@@ -9,7 +15,30 @@
   color: #575c6f;
 }
 .edit__buttons_column {
-  a {
-    text-align: right;
+  a:first-child {
+    margin-left: 25px;
   }
+}
+// Page portfolio element styling END ====
+
+//Inputs Styling
+.input__row {
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 250px;
+    font-family: Raleway;
+    line-height: 22px;
+    font-size: 14px;
+  }
+}
+
+//Main Title
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #575c6f;
 }

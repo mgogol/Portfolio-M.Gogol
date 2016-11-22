@@ -1,16 +1,20 @@
-<%= simple_form_for @project do |f| %>
-    <% if @project.errors.any? %>
-        <!-- true -->
-        <h2><%= pluralize(@project.errors.count, "error") %> prevented this post from saving!</h2>
-        <ul>
-          <% @project.errors.full_messages.each do |msg| %>
-              <li><% msg %></li>
-          <% end %>
-        </ul>
-    <% end %>
+<div class="container">
+  <div class="row input__row">
+    <%= simple_form_for @project do |f| %>
+        <% if @project.errors.any? %>
+            <!-- true -->
+            <h2><%= pluralize(@project.errors.count, "error") %> prevented this post from saving!</h2>
+            <ul>
+              <% @project.errors.full_messages.each do |msg| %>
+                  <li><% msg %></li>
+              <% end %>
+            </ul>
+        <% end %>
 
-    <%= f.input :title, label: 'Title'%>
-    <%= f.input :image %>
-    <%= f.input :description, label: 'Your description here...' %> <br>
-    <%= f.submit %>
-<% end %>
+        <%= f.input :title, label: 'Title'%>
+        <%= f.input :image %>
+        <%= f.input :description, label: 'Your description here...' %> <br>
+        <%= f.submit %>
+    <% end %>
+  </div>
+</div>
