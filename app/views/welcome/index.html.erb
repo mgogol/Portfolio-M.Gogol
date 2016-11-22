@@ -48,12 +48,9 @@
         <p class="main_title">My Portfolio</p>
         <hr>
         <div class="row">
-          <div class="six columns portfolio__item"></div>
-          <div class="six columns portfolio__item"></div>
-        </div>
-        <div class="row">
-          <div class="six columns portfolio__item"></div>
-          <div class="six columns portfolio__item"></div>
+          <% @projects.each do |project| %><%=  %>
+              <div class="six columns portfolio__item"><%= link_to image_tag(project.image.url(:medium)), project %></div>
+          <% end  %>
         </div>
       </div>
     </div>

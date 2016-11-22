@@ -1,5 +1,6 @@
 <%= @project.title %>
 <br>
+<%= image_tag @project.image.url(:medium) %>
 <%= @project.description %>
 
 <%= link_to 'Edit', edit_project_path(@project) %>
