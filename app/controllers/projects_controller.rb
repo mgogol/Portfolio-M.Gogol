@@ -38,10 +38,10 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :image)
+    params.require(:project).permit(:title, :description, :image, :slug)
   end
 
   def find_post
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
   end
 end
