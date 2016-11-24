@@ -247,58 +247,42 @@ hr {
   border-color: #f0f0f0;
 }
 
-//.contact_form_row {
-//  .columns {
-//    margin: 0 auto;
-//  }
-//  input {
-//    width: 50%;
-//  }
-//}
 
-//#name__Input {
-//  margin-top: 30px;
-//  padding: 25px 0 25px 25px;
-//  border-radius: 0;
-//  border-color: #f0f0f0;
-//
-//  &:focus {
-//    border: 1px solid $input_color;
-//  }
-//}
-//
-//#email__Input {
-//  padding: 25px 0 25px 25px;
-//  border-radius: 0;
-//  border-color: #f0f0f0;
-//
-//  &:focus {
-//    border: 1px solid $input_color;
-//  }
-//}
-//
-//#message__Input {
-//  padding: 25px 0 25px 25px;
-//  height: 170px;
-//  width: 55%;
-//  overflow: visible !important;
-//
-//  &:focus {
-//    border: 1px solid $input_color;
-//    //width: 100%;
-//    overflow: visible !important;
-//  }
-//}
+#name__Input {
+  padding: 25px 0 25px 25px;
+  border-radius: 0;
+  border-color: #f0f0f0;
 
-.row__buttons {
-  margin-top: 20px;
+  &:focus {
+    border: 1px solid $input_color;
+  }
+}
+//
+#email__Input {
+  padding: 25px 0 25px 25px;
+  border-radius: 0;
+  border-color: #f0f0f0;
+
+  &:focus {
+    border: 1px solid $input_color;
+  }
+}
+//
+#message__Input {
+  padding: 25px 0 25px 25px;
+  height: 170px;
+  width: 55%;
+  overflow: visible !important;
+
+  &:focus {
+    border: 1px solid $input_color;
+    //width: 100%;
+    overflow: visible !important;
+  }
 }
 
 .success_column {
-  margin-left: 2.3%;
-}
-.contact_input_column {
-  width: 100% !important;
+  margin: 15px 0 15px 2.3%;
 }
 #btn__sumbit {
   font-size: 1em;
@@ -315,7 +299,7 @@ hr {
 }
 
 .social_column {
-  margin-left: 0.5%;
+  margin: 15px 0 15px 0.5%;
 }
 
 .social_link_envelope {
