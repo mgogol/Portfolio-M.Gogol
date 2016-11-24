@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @contact = Contact.new
     @project = Project.new
   end
 

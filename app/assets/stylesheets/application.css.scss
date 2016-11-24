@@ -47,6 +47,12 @@ hr {
   letter-spacing: 0;
   margin-bottom: 0;
 }
+.hidden {
+  display: none;
+}
+.margin-none {
+  margin: 0 0;
+}
 // --- HEADER BEGIN ===========
 .wrapper {
   background-color: #fff;
@@ -241,39 +247,48 @@ hr {
   border-color: #f0f0f0;
 }
 
-#name__Input {
-  margin-top: 30px;
-  padding: 25px 0 25px 25px;
-  border-radius: 0;
-  border-color: #f0f0f0;
+//.contact_form_row {
+//  .columns {
+//    margin: 0 auto;
+//  }
+//  input {
+//    width: 50%;
+//  }
+//}
 
-  &:focus {
-    border: 1px solid $input_color;
-  }
-}
-
-#email__Input {
-  padding: 25px 0 25px 25px;
-  border-radius: 0;
-  border-color: #f0f0f0;
-
-  &:focus {
-    border: 1px solid $input_color;
-  }
-}
-
-#message__Input {
-  padding: 25px 0 25px 25px;
-  height: 170px;
-  width: 55%;
-  overflow: visible !important;
-
-  &:focus {
-    border: 1px solid $input_color;
-    //width: 100%;
-    overflow: visible !important;
-  }
-}
+//#name__Input {
+//  margin-top: 30px;
+//  padding: 25px 0 25px 25px;
+//  border-radius: 0;
+//  border-color: #f0f0f0;
+//
+//  &:focus {
+//    border: 1px solid $input_color;
+//  }
+//}
+//
+//#email__Input {
+//  padding: 25px 0 25px 25px;
+//  border-radius: 0;
+//  border-color: #f0f0f0;
+//
+//  &:focus {
+//    border: 1px solid $input_color;
+//  }
+//}
+//
+//#message__Input {
+//  padding: 25px 0 25px 25px;
+//  height: 170px;
+//  width: 55%;
+//  overflow: visible !important;
+//
+//  &:focus {
+//    border: 1px solid $input_color;
+//    //width: 100%;
+//    overflow: visible !important;
+//  }
+//}
 
 .row__buttons {
   margin-top: 20px;

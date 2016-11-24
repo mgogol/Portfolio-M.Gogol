@@ -57,7 +57,7 @@
   </div>
 </div>
 <!-- [CONTACT ME] BEGIN -->
-<div class="container">
+
   <div class="row">
     <div class="twelve columns contact_me">
       <p class="main_title">Say Hello!</p>
@@ -65,34 +65,10 @@
       <hr>
     </div>
   </div>
-  <form action="">
-    <div class="row">
-      <div class="twelve columns">
-        <input type="text" class="center_block contact_input" placeholder="Name" id="name__Input">
-      </div>
-    </div>
-    <div class="row">
-      <div class="twelve columns">
-        <input type="email" class="center_block contact_input" placeholder="Email" id="email__Input">
-      </div>
-    </div>
-    <div class="row">
-      <div class="twelve columns contact_input_column">
-        <textarea class="center_block contact_input" placeholder="Hi Mykola …" id="message__Input"></textarea>
-      </div>
-    </div>
-    <div class="row row__buttons">
-      <div class="three columns">
-        <p></p>
-      </div>
-      <div class="four columns social_column">
-        <a href="#" class="social_link_envelope"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/m.gogol.dev" class="social_link_facebook"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-      </div>
-      <div class="three columns success_column">
-        <input class="button-primary u-full-width" id="btn__sumbit" type="submit" value="Send">
-      </div>
-    </div>
+
+  <!-- Contact Form Rendering -->
+  <%= render 'contacts/contact_form' %>
+
   </form>
 </div>
 <!-- [CONTACT ME] END -->
