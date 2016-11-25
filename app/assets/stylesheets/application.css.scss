@@ -235,6 +235,12 @@ hr {
     text-align: center;
     color: $orange;
   }
+
+  hr {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .contact_input {
@@ -244,14 +250,14 @@ hr {
   font-weight: 300;
   font-size: 1.1em;
   border-radius: 0;
-  border-color: #f0f0f0;
+  border-color: #dfdfdf;
 }
 
 
 #name__Input {
   padding: 25px 0 25px 25px;
   border-radius: 0;
-  border-color: #f0f0f0;
+  border-color: #dfdfdf;
 
   &:focus {
     border: 1px solid $input_color;
@@ -261,7 +267,7 @@ hr {
 #email__Input {
   padding: 25px 0 25px 25px;
   border-radius: 0;
-  border-color: #f0f0f0;
+  border-color: #dfdfdf;
 
   &:focus {
     border: 1px solid $input_color;

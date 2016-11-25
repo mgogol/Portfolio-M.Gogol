@@ -11,7 +11,7 @@
           <%= f.input :message, required: true, as: :text, input_html: { rows: '10', id: 'message__Input', class: 'center_block contact_input' }, placeholder: 'Hi Mykola ...', label: false %>
         </div>
         <div class="hidden">
-          <%= f.input :nickname %>
+          <%= f.input :nickname, hint: 'Leave this field blank!' %>
         </div>
         <div class="three columns margin-none">
           <p></p>
