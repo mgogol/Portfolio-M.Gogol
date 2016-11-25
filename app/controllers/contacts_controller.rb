@@ -8,6 +8,7 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:error] = nil
+      render 'welcome#index'
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
