@@ -34,7 +34,12 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to project_path
+    redirect_to root_path
+  end
+
+  def self.find(id)
+    friendly.find(id)
+  rescue ActiveRecord::RecordNotFound
   end
 
   private
@@ -44,5 +49,9 @@ class ProjectsController < ApplicationController
 
   def find_post
     @project = Project.friendly.find(params[:id])
+    unless @project
+      redirect_to root_path
+    end
   end
+
 end

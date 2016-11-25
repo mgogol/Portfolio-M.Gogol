@@ -15,6 +15,7 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'friendly_id', '~> 5.1.0'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'sendgrid-ruby'
+gem 'table_print'
 
 group :development, :test do
   gem 'byebug'
