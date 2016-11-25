@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
   end
@@ -37,10 +38,10 @@ class ProjectsController < ApplicationController
     redirect_to root_path
   end
 
-  def self.find(id)
-    friendly.find(id)
-  rescue ActiveRecord::RecordNotFound
-  end
+  # def self.find(id)
+  #   friendly.find(id)
+  # rescue ActiveRecord::RecordNotFound
+  # end
 
   private
   def project_params
