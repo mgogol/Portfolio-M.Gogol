@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:error] = nil
-      render :create
+      redirect_to contacts_path
     else
       flash.now[:error] = 'Cannot send message.'
     end
