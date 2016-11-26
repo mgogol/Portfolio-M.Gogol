@@ -17,7 +17,7 @@
 <body>
 <!-- [HEADER] BEGIN -->
 <div class="wrapper">
-  <div class="container header__container">
+  <div class="header__container">
     <div class="row">
       <div class="twelve columns header__navigation">
         <nav>
@@ -26,6 +26,9 @@
           <a href="#">About</a>
           <a href="#">Portfolio</a>
           <a href="#">Contact Me</a>
+          <% if user_signed_in? %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <% end %>
         </nav>
       </div>
     </div>
@@ -33,7 +36,7 @@
 </div>
 <hr>
 
-<div class="container">
+<div class="container text_center">
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% elsif alert %>

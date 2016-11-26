@@ -388,4 +388,20 @@ h1 {
   color: #575c6f;
 }
 
+.sign_in_row {
+  height: 60vh;
+  margin-top: 8%;
+  h2 {
+    padding-bottom: 30px;
+  }
+  input {
+    width: 100%;
+  }
+  input[type="submit"] {
+    width: 35%;
+    float: right;
+    margin-top: 15px;
+  }
+}
+
 //@import url('projects.css.scss');
