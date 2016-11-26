@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
-  has_attached_file :image, styles: { medium: "800x600>", thumb: "250x250>" }
+  has_attached_file :image, styles: { medium: "100%x100%", thumb: "260x260#" }
+                    # convert_options: { thumb: "-gravity north -thumbnail 260x260^ -extent 260x260" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   extend FriendlyId

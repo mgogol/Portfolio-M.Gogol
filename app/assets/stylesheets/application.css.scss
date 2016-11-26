@@ -201,7 +201,7 @@ hr {
   }
 
   .portfolio__item {
-    width: 49%;
+    width: 49.5%;
     display: inline-block;
     transition: 0.4s;
 
@@ -404,4 +404,11 @@ h1 {
   }
 }
 
+.flash_messages {
+  p {
+    //line-height: 90px;
+    margin-top: 40px;
+    color: #2E2F30;
+  }
+}
 //@import url('projects.css.scss');
