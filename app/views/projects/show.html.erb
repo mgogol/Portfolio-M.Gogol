@@ -14,12 +14,14 @@
       <p class="project__description"><%= markdown @project.description %></p>
     </div>
   </div>
-  <div class="row">
-    <div class="two columns edit__buttons_column u-cf center_block">
-      <%= link_to 'Edit', edit_project_path(@project) %>
-      <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if user_signed_in? %>
+    <div class="row">
+      <div class="two columns edit__buttons_column u-cf center_block">
+        <%= link_to 'Edit', edit_project_path(@project) %>
+        <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 
 <!-- [CONTACT ME] BEGIN -->
