@@ -189,6 +189,7 @@ hr {
 // -- FOUR BLOCK BEGIN
 .portfolio__column {
   display: inline-block;
+  padding-bottom: 50px;
   p {
     text-align: right;
   }
@@ -412,10 +413,25 @@ h1 {
 }
 
 /* Mobile Styling BEGIN ---------------------------- */
+@media (max-width: 1000px) {
+  .about-me__column {
+    width: 100% !important;
+  }
+
+  .portfolio__column {
+    width: 100% !important;
+
+    .portfolio__item {
+      img {
+        max-width: 100%;
+        //width: 99%;
+      }
+    }
+  }
+}
 @media (max-width: 865px) {
   .header__navigation {
     padding: 15px 0;
-
     .container {
       width: 100%;
     }
@@ -438,7 +454,7 @@ h1 {
     }
   }
   .change .bar_1 {
-    -webkit-transform: rotate(-45deg) translate(-10px, 6px) ;
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px) ;
     transform: rotate(-45deg) translate(-7px, 7px) ;
   }
 
@@ -447,7 +463,7 @@ h1 {
     //@extend .bar_1;
   }
   .change .bar_3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    -webkit-transform: rotate(45deg) translate(-8px, -9px) ;
     transform: rotate(45deg) translate(-8px, -9px) ;
 
   }
@@ -465,7 +481,75 @@ h1 {
       display: none;
     }
   }
+
+  .quote__column {
+    blockquote {
+      font-size: 1.2em;
+    }
+  }
 }
 
+
+@media (max-width: 800px) {
+  .quote__column {
+    blockquote {
+      font-size: 1.2em;
+      text-align: right;
+      line-height: 14px;
+      padding: 0;
+      margin-bottom: 0;
+
+      &:after {
+        content: '';
+        padding: 0;
+      }
+    }
+    hr {
+      //text-align: right;
+      float: right;
+    }
+  }
+  .margin-none {
+    display: none;
+  }
+  .contact_form_row {
+    input {
+      width: 100%;
+    }
+    #message__Input {
+      width: 100%;
+    }
+    .success_column {
+      width: 70%;
+      input {
+
+      }
+    }
+    .social_column {
+      width: 27%;
+    }
+  }
+}
+
+@media (max-width:520px) {
+  .title__column h1 {
+    font-size: 3rem;
+  }
+  .portfolio__column {
+    width: 100% !important;
+
+    .portfolio__item {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      img {
+        max-width: 100%;
+        display: block;
+        //margin: 0 auto;
+        margin: 0;
+      }
+    }
+  }
+}
 /* Mobile Styling END ---------------------------- */
 
