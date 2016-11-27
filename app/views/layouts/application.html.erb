@@ -9,6 +9,7 @@
   <!-- Skeleton CSS Framework CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mykola Gogol | Personal Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -19,15 +20,27 @@
 <div class="wrapper">
   <div class="header__container">
     <div class="row">
-      <div class="twelve columns header__navigation">
-        <nav>
+      <div class="button_container" id="toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+      <div class="twelve columns header__navigation overlay" id="overlay">
+        <div class="container">
+          <span class="nav_btn" onclick="menuBarToggle(this)">
+            <div class="bar_1"></div>
+            <div class="bar_2"></div>
+            <div class="bar_3"></div>
+          </span>
+        </div>
+        <nav class="overlay-menu">
           <%= link_to 'Mykola Gogol', root_path, class: 'logo__link' %>
-          <%= link_to 'Home', root_path %>
+          <%= link_to 'Home', root_path%>
           <a href="#">About</a>
           <a href="#">Portfolio</a>
           <a href="#">Contact Me</a>
           <% if user_signed_in? %>
-            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'mobile_menu_element'%>
           <% end %>
         </nav>
       </div>
@@ -56,6 +69,18 @@
     </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf-8">
+  $('span.nav_btn').click(function () {
+    $('nav.overlay-menu').toggle();
+  });
+
+  function menuBarToggle(x) {
+    x.classList.toggle('change');
+  }
+</script>
 </body>
 </html>

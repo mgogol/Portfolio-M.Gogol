@@ -406,9 +406,66 @@ h1 {
 
 .flash_messages {
   p {
-    //line-height: 90px;
     margin-top: 40px;
     color: #2E2F30;
   }
 }
-//@import url('projects.css.scss');
+
+/* Mobile Styling BEGIN ---------------------------- */
+@media (max-width: 865px) {
+  .header__navigation {
+    padding: 15px 0;
+
+    .container {
+      width: 100%;
+    }
+  }
+
+  .nav_btn {
+    display: inline-block;
+    width: 70px;
+    float: right;
+    text-align: right;
+    color: white;
+    cursor: pointer;
+
+    div {
+      width: 30px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s ease-in-out;
+    }
+
+    .change .bar_1 {
+      -webkit-transform: rotate(-45deg) translate(-10px, 6px) ;
+      transform: rotate(-45deg) translate(-10px, 6px) ;
+    }
+
+    .change .bar_2 {
+      -webkit-transform: rotate(45deg) translate(0, 0) ;
+      transform: rotate(45deg) translate(-1px, 2px) ;
+      //@extend .bar_1;
+    }
+    .change .bar_3 {
+      opacity: 0;
+    }
+  }
+  nav {
+    display: none;
+    margin-top: 15px;
+    a {
+      display: block;
+      text-align: right;
+      //font-size: 2em;
+      line-height: 32px;
+    }
+
+    .logo__link {
+      display: none;
+    }
+  }
+}
+
+/* Mobile Styling END ---------------------------- */
+
