@@ -436,20 +436,20 @@ h1 {
       margin: 6px 0;
       transition: 0.4s ease-in-out;
     }
+  }
+  .change .bar_1 {
+    -webkit-transform: rotate(-45deg) translate(-10px, 6px) ;
+    transform: rotate(-45deg) translate(-7px, 7px) ;
+  }
 
-    .change .bar_1 {
-      -webkit-transform: rotate(-45deg) translate(-10px, 6px) ;
-      transform: rotate(-45deg) translate(-10px, 6px) ;
-    }
+  .change .bar_2 {
+    opacity: 0;
+    //@extend .bar_1;
+  }
+  .change .bar_3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -9px) ;
 
-    .change .bar_2 {
-      -webkit-transform: rotate(45deg) translate(0, 0) ;
-      transform: rotate(45deg) translate(-1px, 2px) ;
-      //@extend .bar_1;
-    }
-    .change .bar_3 {
-      opacity: 0;
-    }
   }
   nav {
     display: none;
