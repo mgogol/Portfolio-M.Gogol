@@ -9,6 +9,7 @@ $input_color: #c6cad6;
   margin: 0;
   padding: 0;
   transition: color 0.1s, background 0.4s;
+  transition-timing-function: ease-in-out;
   // font-family: 'Raleway', sans-serif;
 }
 
@@ -292,6 +293,16 @@ hr {
     margin-bottom: 25px;
     width: 20%;
     border: 2px solid $orange;
+  }
+}
+.view_all_button {
+  border: 1px solid $blue;
+  padding: 5px 15px;
+  color: $blue;
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
   }
 }
 // -- FOUR BLOCK END
