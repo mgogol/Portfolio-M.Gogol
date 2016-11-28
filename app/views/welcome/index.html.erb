@@ -39,6 +39,25 @@
       <div class="six columns about-me__column">
         <p class="main_title">About Me</p>
         <hr>
+        <div class="row">
+          <div class="three columns">
+            <%= image_tag 'photo.jpg', alt: 'Mykola Gogol Photo', class: 'profile_image' %>
+          </div>
+          <div class="eight columns">
+            <p class="name_title"><b>Mykola Gogol</b></p>
+            <p>
+              <span class="skill_text ruby_text">Ruby on Rails</span>
+              <span class="skill_text js_text">JS</span>
+              <span class="skill_text html_text">HTML&CSS</span>
+              <span class="skill_text wordpress_text">Wordpress</span>
+              <span class="skill_text bootstrap_text">Bootstrap</span>
+              <span class="skill_text jquery_text">jQuery</span>
+              <span class="skill_text angular_text">AngularJS</span>
+            </p>
+            <!--<p><b>3 years</b> of work experience</p>-->
+            <p class="inspiring_text">3 years of work experience.</p>
+          </div>
+        </div>
         <p><b>Be Brave. Be Responsible.</b> <br> Always go up without stopping. That's why I'm looking for challenging projects and opportunities to help people achieve their goals. <br><br> <b>It's About Quality</b> <br> If you value quality
           and elegant websites, delivered quickly, from a person that understands the value of your goals then I'm the person you should be working with! <br><br> <b> What About Experience?</b> <br> From your perspective, you want a mix
           of experience plus competitive pricing - and I understand that. But, you also get what you pay for, so if my rates don't meet your needs, let's talk further and discuss options that will work for both of us.
@@ -47,9 +66,14 @@
         <p class="main_title">Check My Portfolio</p>
         <hr>
         <div class="row">
-          <% @projects.each do |project| %><%=  %>
+          <% @projects.each do |project| %>
               <div class="portfolio__item"><%= link_to image_tag(project.image.url(:thumb)), project %></div>
           <% end  %>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <button class="u-pull-right"><%= link_to 'View All', project %></button>
+          </div>
         </div>
       </div>
     </div>

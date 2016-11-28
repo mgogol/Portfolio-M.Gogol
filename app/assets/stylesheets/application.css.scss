@@ -222,9 +222,60 @@ hr {
 
 .about-me__column {
   padding-bottom: 70px;
-
+  .profile_image {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .name_title  {
+    font-size: 19px;
+  }
+  .skill_text {
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 11px;
+    opacity: 0.85;
+  }
+  .js_text {
+    background-color: #FFC107;
+  }
+  .ruby_text {
+    background-color: #c62828;
+  }
+  .html_text {
+    background-color: #4FC3F7;
+  }
+  .wordpress_text {
+    background-color: #2E2F30;
+  }
+  .bootstrap_text {
+    background-color: #5E35B1;
+  }
+  .jquery_text {
+    background-color: #0D47A1;
+  }
+  .angular_text {
+    background-color: #F50057;
+  }
+  .inspiring_text {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    //margin-top: 19px;
+  }
   p {
     color: $blue;
+    margin: 0;
+
+    .skill_icon {
+      max-width: 11%;
+      display: inline-block;
+      //margin-top: 10px;
+      //padding-top: 15px;
+      //height: 20px;
+      margin-bottom: -8px;
+    }
+    //font-size: 16px;
   }
 
   hr {
@@ -435,20 +486,29 @@ h1 {
     .container {
       width: 100%;
     }
+    a {
+      padding: 0 25px;
+      font-size: 19px;
+      line-height: 34px;
+    }
   }
-
+  .navigation_container {
+    padding: 0;
+  }
   .nav_btn {
     display: inline-block;
-    width: 70px;
+    //width: 30px;
+    margin-right: 25px;
     float: right;
     text-align: right;
     color: white;
     cursor: pointer;
+    padding: 0;
 
     div {
       width: 30px;
       height: 5px;
-      background-color: #333;
+      background-color: $blue;
       margin: 6px 0;
       transition: 0.4s ease-in-out;
     }
@@ -474,6 +534,7 @@ h1 {
       display: block;
       text-align: right;
       //font-size: 2em;
+      padding-right: 0;
       line-height: 32px;
     }
 

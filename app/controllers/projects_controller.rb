@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @projects = Project.all.order('created_at desc')
   end
 
   def new
@@ -37,11 +38,6 @@ class ProjectsController < ApplicationController
     @project.destroy
     redirect_to root_path
   end
-
-  # def self.find(id)
-  #   friendly.find(id)
-  # rescue ActiveRecord::RecordNotFound
-  # end
 
   private
   def project_params
