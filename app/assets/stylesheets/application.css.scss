@@ -185,8 +185,18 @@ hr {
     border: 2px solid #fdf0d3;
   }
 }
+
 // -- THIRD BLOCK END ===========
 // -- FOUR BLOCK BEGIN
+
+.portfolio_item_show_column {
+  padding: 60px 0;
+  .portfolio_item_show {
+    img {
+      max-width: 100%;
+    }
+  }
+}
 .portfolio__column {
   display: inline-block;
   padding-bottom: 50px;
@@ -200,26 +210,25 @@ hr {
     width: 20%;
     margin: 15px 0 25px auto;
   }
-
-  .portfolio__item {
-    width: 49.5%;
-    display: inline-block;
-    transition: 0.4s;
-
-    img {
-      max-width: 100%;
-    }
-
-    &:nth-child(3) {
-      margin-top: 20px;
-    }
-    &:hover {
-      opacity: 0.5;
-      transition: 0.4s;
-    }
-  }
 }
 
+.portfolio__item {
+  width: 49.5%;
+  display: inline-block;
+  transition: 0.4s;
+
+  img {
+    max-width: 100%;
+  }
+
+  &:nth-child(3) {
+    margin-top: 20px;
+  }
+  &:hover {
+    opacity: 0.5;
+    transition: 0.4s;
+  }
+}
 .about-me__column {
   padding-bottom: 70px;
   .profile_image {
