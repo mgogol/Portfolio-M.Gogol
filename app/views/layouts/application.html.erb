@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700" rel="stylesheet">
+  <%= favicon_link_tag 'tab_image.ico' %>
   <!-- Skeleton CSS Framework CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -36,9 +37,10 @@
         <nav class="overlay-menu">
           <%= link_to 'Mykola Gogol', root_path, class: 'logo__link' %>
           <%= link_to 'Home', root_path%>
-          <a href="#">About</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Contact Me</a>
+          <!--<a href="#">About</a>-->
+          <a href="#about_n_portfolio">About</a>
+          <a href="#about_n_portfolio">Portfolio</a>
+          <a href="#contact">Contact Me</a>
           <% if user_signed_in? %>
             <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'mobile_menu_element'%>
           <% end %>
@@ -64,6 +66,7 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns">
+        <a name="contact" href="#"></a>
         <p class="copyright_text">Copyright &copy; 2016 Mykola Gogol. All Rights Reserved.</p>
       </div>
     </div>
@@ -81,6 +84,23 @@ crossorigin="anonymous"></script>
   function menuBarToggle(x) {
     x.classList.toggle('change');
   }
+
+  // Scroll to a certain element
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
 </script>
 </body>
 </html>
