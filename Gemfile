@@ -17,6 +17,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'sendgrid-ruby'
 gem 'table_print'
 gem 'devise', '~> 4.2'
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug'
