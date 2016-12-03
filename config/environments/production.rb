@@ -46,19 +46,19 @@ Rails.application.configure do
   config.paperclip_defaults = {
       storage: :s3,
       s3_protocol: ':https',
-      s3_permissions: 'public',
-      s3_region: 'us-east-1',
+      s3_permissions: 'private',
+      s3_region: 'us-east-1', #ENV.fetch("AWS_REGION"),
       s3_credentials: {
-        bucket: 'portfolio',
-        access_key_id: 'Q3AM3UQ867SPQQA43P2F',
-        secret_access_key: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG',
+          bucket: 'testbucket', #ENV.fetch("AWS_BUCKET"),
+          access_key_id: 'Q3AM3UQ867SPQQA43P2F',#ENV.fetch("AWS_ACCESS_KEY_ID"),
+          secret_access_key: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG', #ENV.fetch("AWS_SECRET_ACCESS_KEY"),
       },
       s3_host_name: 'play.minio.io:9000',
       s3_options: {
-        endpoint: 'https://play.minio.io:9000',
-        force_path_style: true
+          endpoint: "https://play.minio.io:9000", # for aws-sdk
+          force_path_style: true # for aws-sdk (required for minio)
       },
       url: ':s3_path_url',
-      path: '/:class/:id.:style.:extension'
+      path: "/:class/:id.:style.:extension"
   }
 end
